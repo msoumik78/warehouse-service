@@ -1,4 +1,4 @@
-package com.example.central_monitoring_service.config
+package com.example.warehouse_service.config
 
 import io.nats.client.Connection
 import io.nats.client.Nats
@@ -43,14 +43,14 @@ class UdpConfig {
       fun processUniCastUdpMessageTemp(): IntegrationFlow {
         return IntegrationFlow
           .from(UnicastReceivingChannelAdapter(udpTempPort))
-          .handle("UDPListenerTemp", "handleMessage")
+          .handle("UDPListenerForTemp", "handleMessage")
           .get()
       }
       @Bean
       fun processUniCastUdpMessageHumidity(): IntegrationFlow {
         return IntegrationFlow
           .from(UnicastReceivingChannelAdapter(udpHumidityPort))
-          .handle("UDPListenerHumidity", "handleMessage")
+          .handle("UDPListenerForHumidity", "handleMessage")
           .get()
       }
 }

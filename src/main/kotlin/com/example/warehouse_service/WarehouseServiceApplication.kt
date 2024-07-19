@@ -1,11 +1,14 @@
-package com.example.central_monitoring_service
+package com.example.warehouse_service
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CentralMonitoringServiceApplication
+class WarehouseServiceApplication
 
 fun main(args: Array<String>) {
-	runApplication<CentralMonitoringServiceApplication>(*args)
+  runApplication<WarehouseServiceApplication>(*args)
 }
+
+
+

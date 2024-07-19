@@ -1,4 +1,4 @@
-package com.example.central_monitoring_service.service
+package com.example.warehouse_service.service
 
 import io.nats.client.Connection
 import org.springframework.stereotype.Service
