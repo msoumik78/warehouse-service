@@ -5,7 +5,14 @@ spring:
 server:
   port : 8082
 
+udp-messages:
+  temp:
+    port: 3344
+  humidity:
+    port: 3355
+
 job:
   nats:
     uri: nats://localhost:4222
-    topic: temp
+    temp-topic-name: TEMP
+    humidity-topic-name: HUMIDITY

@@ -9,7 +9,6 @@ import java.nio.charset.StandardCharsets
 class NATSPublisher
   (private val connection: Connection)
 {
-
   fun sendMessage(topic: String?, message: String) {
     connection.publish(topic, message.toByteArray(StandardCharsets.UTF_8))
   }
