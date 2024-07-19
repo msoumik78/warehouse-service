@@ -10,15 +10,31 @@ sensor data respectively. Important thing is that this app needs to be run along
 
 
 # How to run locally
-- First run the nats server on docker using this command : docker run -p 4222:4222 -ti nats:latest
+- First run the nats server on docker using this command :
+  ```kotlin
+    docker run -p 4222:4222 -ti nats:latest
+  ```
 - Then clone the master branch. Ensure that you have at least JDK17 and Maven3.X available. Build the project using the command :
-  mvn clean package -DskipTests
+  ```kotlin
+    mvn clean package -DskipTests
+  ```
 - Now run the app using the below command :
-  java -jar target/warehouse-service-0.0.1-SNAPSHOT.jar
-- Now send a UDP message using the command : 'nc -u localhost 3344' and the message should be like this json format
-  {"sensor_id" : "1", "value": "30"}
+  ```kotlin
+    java -jar target/warehouse-service-0.0.1-SNAPSHOT.jar
+  ```
+- Now send a UDP message using the command :
+  ```kotlin
+     nc -u localhost 3344
+  ```
+  and the message should be like this json format
+  ```kotlin
+      {"sensor_id" : "1", "value": "30"}
+  ```
 - You can see the below message in the log
-  Temp data received = 30
+  ```kotlin
+    Temp data received = 30
+  ```
+
 
 
 # How to run the integration tests
