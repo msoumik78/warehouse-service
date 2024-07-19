@@ -4,7 +4,7 @@ sensor data respectively. Important thing is that this app needs to be run along
 
 
 # Technical details and Pre-requisites
-- Written using Spring Boot framework and comprising multiple modules
+- Written using Spring Boot framework
 - Needs to have the Docker desktop running with Nats server running as a docker container
 - Also needs to have the other app (central-monitoring-app) up and running
 
@@ -14,7 +14,7 @@ sensor data respectively. Important thing is that this app needs to be run along
   ```kotlin
     docker run -p 4222:4222 -ti nats:latest
   ```
-- Then clone the master branch. Ensure that you have at least JDK17 and Maven3.X available. Build the project using the command :
+- Then clone the main branch. Ensure that you have at least JDK17 and Maven3.X available. Build the project using the command :
   ```kotlin
     mvn clean package -DskipTests
   ```
